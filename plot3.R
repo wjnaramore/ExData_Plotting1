@@ -1,0 +1,7 @@
+png(filename = "plot3.png", width = 480, height = 480, units = "px", bg = "transparent")
+plot(data2day$DateTime,data2day$Sub_metering_1,type = "n", xlab = "", ylab = "Energy sub metering",bg = "transparent")
+lines(data2day$DateTime,data2day$Sub_metering_1,type = "l", col = "black")
+lines(data2day$DateTime,data2day$Sub_metering_2,type = "l", col = "red")
+lines(data2day$DateTime,data2day$Sub_metering_3,type = "l", col = "blue")
+legend("topright",col = c("black","red","blue"),lty = c("solid","solid","solid"),legend = names(data2day[7:9]))
+dev.off()
